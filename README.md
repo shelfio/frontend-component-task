@@ -41,7 +41,7 @@ Bonus points:
 ### How Install finished package
 
 ```
-$ yarn add @shelf/xxxxxx
+$ yarn add @shelf/react-role-selector
 ```
 
 ### Usage
