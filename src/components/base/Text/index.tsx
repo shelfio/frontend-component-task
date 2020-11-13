@@ -10,7 +10,8 @@ export const Text: React.FC<TextProps> = ({ isInline, children }) => {
 }; 
 
 const TextWrapper = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   color: #4F545D;
+  margin: 10px 0;
   display: ${(props: TextProps) => props.isInline ? 'inline-block' : 'block'};
 `;

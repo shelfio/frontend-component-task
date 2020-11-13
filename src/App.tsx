@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from 'styled-components';
 
-import {Form, Select, Text} from './components';
+import {Form, Select, Text, Checkbox} from './components';
 
 import './App.css';
 
@@ -13,6 +13,11 @@ export const App: React.FC = () => {
         <Select />
 
         <Text>Folders</Text>
+        <Checkbox />
+        <Checkbox />
+        <Checkbox />
+        <Checkbox />
+        <Checkbox />
       </Form>
     </Wrapper>
   );
