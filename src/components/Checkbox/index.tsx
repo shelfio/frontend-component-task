@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 import {Text} from '../index';
 
-export const Checkbox: React.FC = () => {
+interface CheckboxProps {
+  text: string;
+}
+
+export const Checkbox: React.FC<CheckboxProps> = ({ text }) => {
   return (
     <CheckboxWrapper>
       <CheckboxIcon src="../../../materials/uncheck.svg" />
-      <Text>Create</Text>
+      <Text>{text}</Text>
     </CheckboxWrapper>
   );
 };

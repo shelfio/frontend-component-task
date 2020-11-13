@@ -10,6 +10,8 @@ export const App: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [selectedCase, setSelectedCase] = useState<string>('');
 
+  const renderCheckboxes = checkboxesData.map((elem, index) => <Checkbox text={elem} key={index} />)
+
   return (
     <Wrapper
       onClick={() => {
@@ -29,20 +31,12 @@ export const App: React.FC = () => {
         />
 
         <Text>Folders</Text>
-        <Checkbox />
-        <Checkbox />
-        <Checkbox />
-        <Checkbox />
-        <Checkbox />
+        {renderCheckboxes}
 
         <HorizontalLine />
 
         <Text>Gems</Text>
-        <Checkbox />
-        <Checkbox />
-        <Checkbox />
-        <Checkbox />
-        <Checkbox />
+        {renderCheckboxes}
       </Form>
 
       <Button text="save" />
