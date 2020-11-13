@@ -8,10 +8,15 @@ import './App.css';
 
 export const App: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const [selectedCase, setSelectedCase] = useState<string>('');
+  const [selectedRole, setSelectedRole] = useState<string>('');
+  const [showResult, setShowResult] = useState<boolean>(false);
 
   const renderCheckboxes = checkboxesData.map((elem, index) => (
-    <Checkbox text={elem} selectedRole={selectedCase} key={index} />
+    <Checkbox
+      text={elem}
+      selectedRole={selectedRole}
+      key={index}
+    />
   ));
 
   return (
@@ -26,10 +31,15 @@ export const App: React.FC = () => {
         <Text isInline={true}>User role</Text>
         <Select
           isVisible={isModalVisible}
-          setIsVisible={() => setIsModalVisible(!isModalVisible)}
-          onSelectChange={(selected) => setSelectedCase(selected)}
+          setIsVisible={() => {
+              setIsModalVisible(!isModalVisible);
+          }}
+          onSelectChange={(selected) => {
+            setSelectedRole(selected);
+            setShowResult(false);
+          }}
           data={selectData}
-          selectedValue={selectedCase}
+          selectedValue={selectedRole}
         />
 
         <Text>Folders</Text>
@@ -41,7 +51,10 @@ export const App: React.FC = () => {
         {renderCheckboxes}
       </Form>
 
-      <Button text="save" />
+      <Button text="save" onClick={() => selectedRole && setShowResult(true)} />
+      {showResult && (
+          <Text isInline={true}>Selected role: {selectedRole}</Text>
+      )}
     </Wrapper>
   );
 };

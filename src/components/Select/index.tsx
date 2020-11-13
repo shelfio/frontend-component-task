@@ -21,7 +21,7 @@ export const Select: React.FC<SelectProps> = ({
   const renderItemsList = data.map((elem, index) => (
     <SelectItem
       onClick={() => {
-        onSelectChange(elem)
+        onSelectChange(elem);
         setIsVisible();
       }}
       key={index}

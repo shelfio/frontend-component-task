@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 interface ButtonProps {
   text: string;
+  onClick(): void;
 }
 
-export const Button: React.FC<ButtonProps> = ({text}) => {
+export const Button: React.FC<ButtonProps> = ({text, onClick}) => {
   return (
-    <ButtonWrapper>
+    <ButtonWrapper onClick={onClick}>
       <ButtonText>{text}</ButtonText>
     </ButtonWrapper>
   );
@@ -16,11 +17,12 @@ export const Button: React.FC<ButtonProps> = ({text}) => {
 const ButtonWrapper = styled.div`
   width: 150px;
   height: 40px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: #ef6930;
   cursor: pointer;
+  margin-right: 20px;
 `;
 
 const ButtonText = styled.p`
