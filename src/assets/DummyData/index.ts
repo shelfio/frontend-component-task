@@ -1,2 +1,2 @@
-export const SelectData = ['user', 'member', 'admin', 'custom'];
-export const CheckboxesData = ['Create', 'Update', 'Move', 'Delete', 'View', 'Share'];
+export const selectData = ['User', 'Member', 'Admin', 'Custom'];
+export const checkboxesData = ['Create', 'Update', 'Move', 'Delete', 'View', 'Share'];
