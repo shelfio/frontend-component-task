@@ -12,11 +12,7 @@ export const App: React.FC = () => {
   const [showResult, setShowResult] = useState<boolean>(false);
 
   const renderCheckboxes = checkboxesData.map((elem, index) => (
-    <Checkbox
-      text={elem}
-      selectedRole={selectedRole}
-      key={index}
-    />
+    <Checkbox text={elem} selectedRole={selectedRole} key={index} />
   ));
 
   return (
@@ -32,7 +28,7 @@ export const App: React.FC = () => {
         <Select
           isVisible={isModalVisible}
           setIsVisible={() => {
-              setIsModalVisible(!isModalVisible);
+            setIsModalVisible(!isModalVisible);
           }}
           onSelectChange={(selected) => {
             setSelectedRole(selected);
@@ -52,9 +48,7 @@ export const App: React.FC = () => {
       </Form>
 
       <Button text="save" onClick={() => selectedRole && setShowResult(true)} />
-      {showResult && (
-          <Text isInline={true}>Selected role: {selectedRole}</Text>
-      )}
+      {showResult && <Text isInline={true}>Selected role: {selectedRole}</Text>}
     </Wrapper>
   );
 };

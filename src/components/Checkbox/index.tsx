@@ -13,7 +13,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({text, selectedRole}) => {
 
   useEffect(() => {
     switch (selectedRole) {
-      case 'Admin': 
+      case 'Admin':
         setIsSelected(true);
         break;
       case 'Member':
@@ -26,7 +26,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({text, selectedRole}) => {
         selectedRole && setIsSelected(false);
     }
   }, [selectedRole]);
-  
+
   const onCheckboxClick = () => {
     if (selectedRole === 'Custom') {
       setIsSelected(!isSelected);
