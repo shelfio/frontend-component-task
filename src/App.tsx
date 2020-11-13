@@ -9,8 +9,10 @@ export const App: React.FC = () => {
   return (
     <Wrapper>
       <Form>
-          <Text isInline={true}>User role</Text>
-          <Select />
+        <Text isInline={true}>User role</Text>
+        <Select />
+
+        <Text>Folders</Text>
       </Form>
     </Wrapper>
   );

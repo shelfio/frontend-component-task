@@ -23,6 +23,7 @@ const SelectWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  margin: 0 10px;
 `;
 
 const SelectArrow = styled.img`
