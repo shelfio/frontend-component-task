@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {Text} from '../index';
-// import arrow from '../../../materials/collapse-arrow.svg'
 
 export const Select: React.FC = () => {
   return (

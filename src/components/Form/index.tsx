@@ -8,4 +8,5 @@ export const Form: React.FC = ({ children }) => {
 const FormWrapper = styled.div`
   background-color: #ffffff;
   padding: 20px;
+  margin-bottom: 40px;
 `;

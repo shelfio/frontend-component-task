@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from 'styled-components';
 
-import {Form, Select, Text, Checkbox, HorizontalLine} from './components';
+import {Form, Select, Text, Checkbox, HorizontalLine, Button} from './components';
 
 import './App.css';
 
@@ -28,6 +28,8 @@ export const App: React.FC = () => {
         <Checkbox />
         <Checkbox />
       </Form>
+
+      <Button text='save' />
     </Wrapper>
   );
 };
