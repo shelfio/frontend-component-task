@@ -50,11 +50,7 @@ $ yarn add @shelf/react-role-selector
 const {RoleSelector} = require('@shelf/react-role-selector'); // not a real package until you publish it
 
 //...
-<RoleSelector
-  onSelect={/* cb with selected role */}
-  onChage={/* cb with fresh custom role */}
-  onSubmit={/* cb with submitted data */}
-/>;
+<RoleSelector roles={/* string array of roles */} checkboxes={/* string array of checkboxes */} />;
 //...
 ```
 
