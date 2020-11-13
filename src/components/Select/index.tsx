@@ -68,6 +68,7 @@ const SelectModal = styled.div`
   background-color: #f1f1f1;
   padding: 5px 10px;
   box-sizing: border-box;
+  z-index: 1;
 `;
 
 const SelectItem = styled.p`

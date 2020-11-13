@@ -10,7 +10,9 @@ export const App: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [selectedCase, setSelectedCase] = useState<string>('');
 
-  const renderCheckboxes = checkboxesData.map((elem, index) => <Checkbox text={elem} key={index} />)
+  const renderCheckboxes = checkboxesData.map((elem, index) => (
+    <Checkbox text={elem} selectedRole={selectedCase} key={index} />
+  ));
 
   return (
     <Wrapper
